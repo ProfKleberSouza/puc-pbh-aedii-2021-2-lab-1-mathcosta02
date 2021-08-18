@@ -3,16 +3,23 @@
 
 int main() {
 
-    int a, b, s;
-  
-  // ENTRADA DE DADOS
-  scanf("%d %d", &a, &b);
+  int n, menor, maior;
+
+  // ENTRADA DO TAMANHO DO VETOR
+  scanf("%d", &n);
+
+  int v[n];
+  // ENTRADA DE DADOS DO VETOR
+  for(int i=0; i<n; i++){
+    scanf("%d", &v[i]);
+  }
 
   // PROCESSAMENTO - EXECUTANDO A FUNCAO
-  s = somar(a, b);
+  menor_maior(v, n, &menor, &maior);
 
   // SAIDA - IMPRIMINDO O RESULTADO
-  printf("SOMA = %d\n", s);
+  printf("MENOR = %d\n", menor);
+  printf("MAIOR = %d", maior);
 
   return(0);
 }
