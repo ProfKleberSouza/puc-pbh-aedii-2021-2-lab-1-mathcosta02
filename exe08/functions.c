@@ -1,7 +1,20 @@
-
+#include <stdbool.h>
+#include <string.h>
 #include "functions.h"
 
-int somar(int n1, int n2){
+bool is_palindromo_rec(char texto[], int i, int f){
+  if(i >= f)
+    return true;
+  
+  if(texto[i] != texto[f])
+    return false;
 
-    return n1+n2;
+  i++;
+  f--;
+  
+  return is_palindromo_rec(texto, i, f);
+}
+
+bool is_palindromo(char texto[]){
+  return is_palindromo_rec(texto, 0, strlen(texto)-1);
 }
