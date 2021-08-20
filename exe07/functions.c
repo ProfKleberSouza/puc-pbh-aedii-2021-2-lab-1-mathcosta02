@@ -1,7 +1,13 @@
 
 #include "functions.h"
 
-int somar(int n1, int n2){
+int mdc(int x, int y){
+  int resto;
 
-    return n1+n2;
+  if(y==0){
+    return x;
+  }
+  else{
+    return mdc(y, x % y);
+  }
 }
