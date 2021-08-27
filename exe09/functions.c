@@ -11,17 +11,11 @@ void placar_possiveis_rec(char placar[], int m, int n, int pos){
 
     if(m > 0){
       placar[pos] = 'A';
-      getchar();
-      
-      printf("OI\n");
       placar_possiveis_rec(placar, m-1,  n, pos+1);
     }
 
     if(n > 0){
       placar[pos] = 'B';
-      getchar();
-      
-      printf("TCHAU\n");
       placar_possiveis_rec(placar, m,  n-1, pos+1);
     }
   }
